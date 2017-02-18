@@ -27,7 +27,7 @@ class AddViewController: UIViewController, UITextFieldDelegate , UIImagePickerCo
         
         cityTextField.delegate = self
         
-        checkValidMealName()
+        checkValidCityName()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,14 +56,15 @@ class AddViewController: UIViewController, UITextFieldDelegate , UIImagePickerCo
     
     //MARK: Private Methods
     
-    func checkValidMealName() {
+    
+    func checkValidCityName() {
         // Disable the Save button if the text field is empty.
         let text = cityTextField.text ?? ""
         saveButton.enabled = !text.isEmpty
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        checkValidMealName()
+        checkValidCityName()
         navigationItem.title = textField.text
     }
 
@@ -101,6 +102,7 @@ class AddViewController: UIViewController, UITextFieldDelegate , UIImagePickerCo
     @IBAction func cancel(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
  
     
     
