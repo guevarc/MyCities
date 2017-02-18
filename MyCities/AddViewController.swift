@@ -110,38 +110,14 @@ class AddViewController: UIViewController, UITextFieldDelegate , UIImagePickerCo
             let cityname = cityTextField.text ?? ""
             let country = countryTextField.text ?? ""
             let photo = photoImageView.image
+            let description = DescriptionTextView.text ?? ""
+            
 
-            city = City(city: cityname, country: country, photo: photo)
+            city = City(city: cityname, country: country, photo: photo, description: description)
         }
 
     }
-    
-    
 
-    
-
-
-    
-    
-    // MARK: Actions
-        /*
- @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
-        // Hide the keyboard
-        cityTextField.resignFirstResponder()
-        
-        // UIImagePickerController is a view controller that lets an user pick media from their photo library
-        let imagePickerController = UIImagePickerController()
-    
-        // Only allow photos to be picked, not taken.
-        imagePickerController.sourceType = .PhotoLibrary
-        
-        // Make sure ViewController is notified when the user picks an image
-        imagePickerController.delegate = self
-        
-        //FIX
-        //present(imagePickerController, animated: true, completion: nil)
-    }
- */
    
 
 }

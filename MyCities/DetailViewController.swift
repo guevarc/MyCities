@@ -15,23 +15,22 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var cityImage: UIImageView!
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var countryName: UILabel!
-    @IBOutlet weak var smallDescription: UILabel!
+    @IBOutlet weak var smallDescription: UITextView!
+    
 
-    
-    var photo = UIImage(named: "Paris")
-    var cityNameString = ""
-    var country = ""
-    //var descrip = ""
-    
+    @IBAction func backButton(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cityImage.image = photo
+        cityImage.image = city?.photo
         cityName.text = city?.city
         countryName.text = city?.country
-        //smallDescription.text = descrip
+        smallDescription.text = city?.description
         
         
         

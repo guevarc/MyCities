@@ -47,15 +47,15 @@ class CityTableViewController: UITableViewController {
         let photo2 = UIImage(named: "Madrid")
         let photo3 = UIImage(named: "Amsterdam")
         
-        guard let city1 = City(city: "Paris", country: "France" , photo: photo1) else {
+        guard let city1 = City(city: "Paris", country: "France" , photo: photo1, description:  "Summer 2016") else {
             fatalError("Unable to instantiate city1")
         }
         
-        guard let city2 = City(city: "Madrid", country: "Spain" , photo: photo2) else {
+        guard let city2 = City(city: "Madrid", country: "Spain" , photo: photo2, description: "January 2015") else {
             fatalError("Unable to instantiate city2")
         }
         
-        guard let city3 = City(city: "Amsterdam", country: "Netherlands" , photo: photo3) else {
+        guard let city3 = City(city: "Amsterdam", country: "Netherlands" , photo: photo3, description: "February 2017") else {
             fatalError("Unable to instantiate city3")
         }
         
